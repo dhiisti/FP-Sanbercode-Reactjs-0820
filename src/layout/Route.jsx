@@ -6,6 +6,7 @@ import MovieSider from '../pages/Movie/MovieSider';
 import GameSider from '../pages/Game/GameSider';
 import Login from '../pages/Login/Login';
 import Register from '../pages/Login/Register';
+import ChangePass from '../pages/Login/ChangePass';
 import Detail from '../pages/Home/MoviesDetail'
 import GameDetail from '../pages/Home/GamesDetail'
 import {UserContext} from "../context/UserContext";
@@ -35,6 +36,7 @@ const Section = () =>{
         <Route exact path="/gedit" user={user} component={GameSider}/>
         <Route exact path="/login" user={user} component={Login}/>
         <Route exact path="/register" user={user} component={Register}/>
+        <Route exact path="/changepass" user={user} component={ChangePass}/>
         {/* <Route exact path="/movieedit" component={MovieEdit}/> */}
         {/* <PrivateRoute exact path="/movies" user={user} component={MovieEdit}/> */}
       </Switch>

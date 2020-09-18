@@ -3,7 +3,9 @@ import { GameContext } from "../../context/GameContext"
 import { UserContext } from "../../context/UserContext";
 import {useHistory} from "react-router-dom"
 import axios from "axios";
-import { Table, Button, Tooltip } from 'antd';
+import {Table, Button, Space} from 'antd';
+// import Highlighter from 'react-highlight-words';
+import { SearchOutlined } from '@ant-design/icons';
 import '../Movie/movie.css'
 
 const GameTable = () => {
@@ -85,10 +87,25 @@ const GameTable = () => {
     {
       title: 'Title',
       dataIndex: 'name',
+      filters: [
+        {
+          text: 'Talion',
+          value: 'Talion',
+        },
+        {
+          text: 'Roblox',
+          value: 'ROBLOX',
+        },
+      ],
+      // specify the condition of filtering result
+      // here is that finding the name started with `value`
+      onFilter: (value, record) => record.name.indexOf(value) === 0,
+      sorter: (a, b) => a.name.localeCompare(b.name)
     },
     {
       title: 'Genre',
       dataIndex: 'genre',
+      sorter: (a, b) => a.genre.localeCompare(b.genre)
     },
     {
       title: 'Release',
@@ -115,6 +132,11 @@ const GameTable = () => {
       },
     },
     {
+      title: 'Platform',
+      dataIndex: 'platform',
+      sorter: (a, b) => a.platform.localeCompare(b.platform)
+    },
+    {
       title: 'Action',
       dataIndex: 'id',
       render: (dataIndex) => (
@@ -129,6 +151,8 @@ const GameTable = () => {
   function onChange(filters, sorter, extra) {
     console.log('params', filters, sorter, extra);
   }
+
+
 
   return (
     <>

@@ -9,6 +9,7 @@ const Nav = () =>{
   const styleLinkNavbar={
       color: "#F8E9E9",
       textDecoration: "none",
+      fontFamily: "'Raleway', sans-serif",
   }
 
   const [user, setUser] = useContext(UserContext)
@@ -30,12 +31,17 @@ const Nav = () =>{
             <Button color="inherit">
               <Link style={styleLinkNavbar} to="/">Home</Link>
             </Button>
-            <Button color="inherit">
-                <Link style={styleLinkNavbar} to="/edit">Movie Edit</Link>
-            </Button>
-            <Button color="inherit">
-                <Link style={styleLinkNavbar} to="/gedit">Game Edit</Link>
-            </Button>
+            {user !== null && (
+              <>
+                <Button color="inherit">
+                    <Link style={styleLinkNavbar} to="/edit">Movie Edit</Link>
+                </Button>
+                <Button color="inherit">
+                    <Link style={styleLinkNavbar} to="/gedit">Game Edit</Link>
+                </Button>
+              </>
+              )
+            }
           </Grid>
     
           <Grid item>
@@ -57,10 +63,10 @@ const Nav = () =>{
                 user !== null && (
                   <>
                     <Button color="inherit">
-                      {user.name}
+                      <Link style={styleLinkNavbar} to="/changepass">Change Password</Link>  
                     </Button>
-                    <Button onClick={handleLogout} color="inherit">
-                      Logout
+                    <Button onClick={handleLogout} color="inherit" style={styleLinkNavbar}>
+                      Hi,{user.name}! Logout
                     </Button>
                   </>
                 )

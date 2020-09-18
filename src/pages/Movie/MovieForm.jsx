@@ -4,7 +4,7 @@ import { UserContext } from "../../context/UserContext";
 import { Input } from 'antd';
 import axios from "axios";
 
-// import './movie.css'
+import './movie.css'
 
 const { TextArea } = Input;
 
@@ -93,18 +93,22 @@ const MovieForm = () => {
     };
   }
 
+  const styleForm = {
+    width: "50%"
+}
+
   return (
     <>
       <form onSubmit={submitForm}>
         <h1>Movie Form</h1>
         <div className="input-container">
           <label>Title:</label>
-          <Input required type="text" name="title" value={input.title} onChange={myChangeHandler} placeholder="Title" />
+          <Input required type="text" name="title" value={input.title} onChange={myChangeHandler} style={{width: "50%"}} placeholder="Title" />
         </div>
 
         <div className="input-container">
           <label>Description:</label>
-          <TextArea rows={4} required name="description" value={input.description} onChange={myChangeHandler}/>
+          <TextArea rows={4} required name="description" value={input.description} onChange={myChangeHandler} style={{width: "50%"}}/>
           {/* <textarea required name="description"
             style={{"height":"200px"}}
             value={input.description} onChange={myChangeHandler}/> */}
@@ -112,31 +116,31 @@ const MovieForm = () => {
 
         <div className="input-container">
           <label>Year:</label>
-          <Input required type="number" name="year" value={input.year} min="1980" onChange={myChangeHandler} placeholder="Year" />
+          <Input required type="number" name="year" value={input.year} min="1980" onChange={myChangeHandler} style={{width: "50%"}} placeholder="Year" />
           {/* <input required type="number" name="year" value={input.year} min= "1980" onChange={myChangeHandler}/> */}
         </div>
 
         <div className="input-container">
           <label>Duration:</label>
-          <Input required type="number" name="duration" value={input.duration} onChange={myChangeHandler} placeholder="Duration" />
+          <Input required type="number" name="duration" value={input.duration} onChange={myChangeHandler} style={{width: "50%"}} placeholder="Duration" />
           {/* <input required type="number" name="duration" value={input.duration} onChange={myChangeHandler}/> */}
         </div>
 
         <div className="input-container">
           <label>Genre:</label>
-          <Input required type="text" name="genre" value={input.genre} onChange={myChangeHandler} placeholder="Genre" />
+          <Input required type="text" name="genre" value={input.genre} onChange={myChangeHandler} style={{width: "50%"}} placeholder="Genre" />
           {/* <input required type="text" name="genre" value={input.genre} onChange={myChangeHandler}/> */}
         </div>
 
         <div className="input-container">
           <label>Rating:</label>
-          <Input required type="number" name="rating" value={input.rating} min="0" max="10" onChange={myChangeHandler} placeholder="Title" />
+          <Input required type="number" name="rating" value={input.rating} min="0" max="10" onChange={myChangeHandler} style={{width: "50%"}} placeholder="Title" />
           {/* <input required type="number" name="rating" value={input.rating} min="0" max="10" onChange={myChangeHandler}/> */}
         </div>
 
         <div className="input-container">
           <label>Image URL:</label>
-          <TextArea rows={4} required name="image_url" value={input.image_url} onChange={myChangeHandler}/>
+          <TextArea rows={4} required name="image_url" value={input.image_url} onChange={myChangeHandler} style={{width: "50%"}}/>
           {/* <textarea required name="image_url" value={input.image_url} onChange={myChangeHandler}/> */}
         </div>   
         <button className="submit">Submit</button>

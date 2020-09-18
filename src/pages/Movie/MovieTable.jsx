@@ -102,6 +102,7 @@ const MovieTable = () => {
       {
         title: 'Title',
         dataIndex: 'title',
+        sorter: (a, b) => a.title.localeCompare(b.title)
       },
       {
         title: 'Description',
@@ -110,6 +111,7 @@ const MovieTable = () => {
       {
         title: 'Genre',
         dataIndex: 'genre',
+        sorter: (a, b) => a.title.localeCompare(b.title)
       },
       {
         title: 'Year',

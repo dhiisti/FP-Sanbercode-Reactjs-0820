@@ -2,10 +2,11 @@ import React, { useContext, useState } from "react"
 import {UserContext} from '../../context/UserContext'
 import axios from "axios"
 import {useHistory} from "react-router-dom"
+import { Input } from 'antd';
 
 const Login = () =>{
   let history = useHistory()
-  const [, setUser] = useContext(UserContext)
+  const [user, setUser] = useContext(UserContext)
   const [input, setInput] = useState({email: "" , password: ""})
 
   const handleSubmit = (event) =>{
@@ -45,15 +46,17 @@ const Login = () =>{
 
   return(
     <>
-      <div style={{margin: "0 auto", width: "25%", padding: "50px"}}>
-        <form onSubmit={handleSubmit}>
+      <div style={{background: "#EAF4D3", width: "60%", margin: "50px auto", borderRadius: "20px", padding: "20px"}}>
+        <form onSubmit={handleSubmit} style={{alignItems: "center"}}>
           <label>Email: </label>
-          <input type="email" name="email" onChange={handleChange} value={input.email}/>
+          <Input required type="email" name="email" onChange={handleChange} value={input.email} style={{width: "50%"}} placeholder="Email" />
+          {/* <input type="email" name="email" onChange={handleChange} value={input.email}/> */}
           <br/>
           <label>Password: </label>
-          <input type="password" name="password" onChange={handleChange} value={input.password}/>
+          <Input required type="password" name="password" onChange={handleChange} value={input.password} style={{width: "50%"}} placeholder="Password" />
+          {/* <input type="password" name="password" onChange={handleChange} value={input.password}/> */}
           <br/>
-          <button>Login</button>
+          <button style={{width: "50%"}}>Login</button>
         </form>
       </div>
     </>

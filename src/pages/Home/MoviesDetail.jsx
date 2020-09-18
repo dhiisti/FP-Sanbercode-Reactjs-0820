@@ -30,7 +30,7 @@ const MovieDetail = () => {
   }, [dataMovie, setData]);
 
   return (
-    <div style={{background: "#EAF4D3", width: "80%", margin: "20px auto"}}>
+    <div style={{background: "#EAF4D3", width: "80%", margin: "20px auto", borderRadius: "20px"}}>
       {dataMovie !== null && (
         <div style={{display: "flex", flexDirection: "column", padding: "50px"}}>
         <div style={{display: "flex", flexDirection: "row"}}>
