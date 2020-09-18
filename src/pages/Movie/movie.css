@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Raleway:wght@400;500&display=swap');
+
+h1 {
+    text-align: center;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: red;
+    margin: 20px auto;
+}
+
+input, textarea {
+    font-family: 'Raleway', sans-serif;
+    padding: 10px;
+    height: 35px;
+    width: 50%;
+}
+
+
+label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+article{
+    width: 100%;
+}

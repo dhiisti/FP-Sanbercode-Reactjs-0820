@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Raleway:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    /* background-color: red; */
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'Passion One', cursive;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2,p{
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.5em;
+}
