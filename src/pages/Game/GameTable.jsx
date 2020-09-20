@@ -87,29 +87,126 @@ const GameTable = () => {
     {
       title: 'Title',
       dataIndex: 'name',
-      filters: [
-        {
-          text: 'Talion',
-          value: 'Talion',
-        },
-        {
-          text: 'Roblox',
-          value: 'ROBLOX',
-        },
-      ],
-      // specify the condition of filtering result
-      // here is that finding the name started with `value`
-      onFilter: (value, record) => record.name.indexOf(value) === 0,
       sorter: (a, b) => a.name.localeCompare(b.name)
     },
     {
       title: 'Genre',
       dataIndex: 'genre',
+      filters: [
+        {
+          text: 'Action',
+          value: 'Action',
+        },
+        {
+          text: 'Robot',
+          value: 'Robot',
+        },
+        {
+          text: 'FPS',
+          value: 'FPS',
+        },
+        {
+          text: 'Simulator',
+          value: 'Simulator',
+        },
+        {
+          text: 'Pertanian',
+          value: 'Pertanian',
+        },
+      ],
+      // specify the condition of filtering result
+      // here is that finding the name started with `value`
+      onFilter: (value, record) => record.genre.indexOf(value) === 0,
       sorter: (a, b) => a.genre.localeCompare(b.genre)
     },
     {
       title: 'Release',
       dataIndex: 'release',
+      filters: [
+        {
+          text: '2000',
+          value: '2000',
+        },
+        {
+          text: '2001',
+          value: '2001',
+        },
+        {
+          text: '2002',
+          value: '2002',
+        },
+        {
+          text: '2003',
+          value: '2003',
+        },
+        {
+          text: '2004',
+          value: '2004',
+        },
+        {
+          text: '2005',
+          value: '2005',
+        },
+        {
+          text: '2006',
+          value: '2006',
+        },
+        {
+          text: '2007',
+          value: '2007',
+        },
+        {
+          text: '2008',
+          value: '2008',
+        },
+        {
+          text: '2009',
+          value: '2009',
+        },
+        {
+          text: '2010',
+          value: '2010',
+        },
+        {
+          text: '2011',
+          value: '2011',
+        },
+        {
+          text: '2012',
+          value: '2012',
+        },
+        {
+          text: '2013',
+          value: '2013',
+        },
+        {
+          text: '2014',
+          value: '2014',
+        },
+        {
+          text: '2015',
+          value: '2015',
+        },
+        {
+          text: '2016',
+          value: '2016',
+        },
+        {
+          text: '2017',
+          value: '2017',
+        },
+        {
+          text: '2018',
+          value: '2018',
+        },
+        {
+          text: '2019',
+          value: '2019',
+        },
+      ],
+      // specify the condition of filtering result
+      // here is that finding the name started with `value`
+      onFilter: (value, record) => record.release.indexOf(value) === 0,
       sorter: {
         compare: (a, b) => a.release - b.release,
         multiple: 3,
@@ -134,6 +231,23 @@ const GameTable = () => {
     {
       title: 'Platform',
       dataIndex: 'platform',
+      filters: [
+        {
+          text: 'PC',
+          value: 'PC',
+        },
+        {
+          text: 'PS',
+          value: 'PS',
+        },
+        {
+          text: 'Xbox',
+          value: 'Xbox',
+        },
+      ],
+      // specify the condition of filtering result
+      // here is that finding the name started with `value`
+      onFilter: (value, record) => record.platform.indexOf(value) === 0,
       sorter: (a, b) => a.platform.localeCompare(b.platform)
     },
     {

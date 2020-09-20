@@ -78,7 +78,7 @@ class Home extends Component {
       <div className="container">
         <h1>Daftar Film Terbaik</h1>
           {/* <input type="text" className="input" onChange={this.handleChange} placeholder="Search..." /> */}
-        <Row gutter={[5, 5]}>
+        <Row gutter={[16, 24]} >
           {
             this.state.movies.map((item)=>{
               return(

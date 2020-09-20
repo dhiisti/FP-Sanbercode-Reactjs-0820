@@ -35,11 +35,11 @@ class GameHome extends Component {
     return (
       <div className="container">
         <h1>Daftar Game Terbaik</h1>
-        <Row gutter={[5, 5]}>
+        <Row gutter={[16, 24]} >
           {
             this.state.games.map((item)=>{
               return(
-                  <Col span={6}>
+                  <Col className="gutter-row" span={6}>
                     <Card
                         hoverable
                         style={{ width: 260, height: 580, backgroundColor:"#EAF4D3", borderRadius: "20px" }}
@@ -51,7 +51,6 @@ class GameHome extends Component {
                             <div>
                                 <strong>Genre: {item.genre}</strong><br/>
                                 <strong>Release: {item.release}</strong><br/>
-                                <strong>Platform: {item.platform}</strong><br/>
                                 <Button type="primary" style={{ borderRadius: "20px", marginTop: "10px", background: '#394648', border: "none"}}><Link to={`/gdetail/${item.id}`}>Detail</Link></Button>
                             </div> 
                         }/>
