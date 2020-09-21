@@ -6,7 +6,7 @@ import { Input } from 'antd';
 
 const Login = () =>{
   let history = useHistory()
-  const [user, setUser] = useContext(UserContext)
+  const [, setUser] = useContext(UserContext)
   const [input, setInput] = useState({email: "" , password: ""})
 
   const handleSubmit = (event) =>{

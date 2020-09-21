@@ -7,24 +7,6 @@ import { AudioOutlined } from '@ant-design/icons';
 import './Home.css'
 
 const { Meta } = Card;
-const { Search } = Input;
-
-const suffix = (
-  <AudioOutlined
-    style={{
-      fontSize: 16,
-      color: '#1890ff',
-    }}
-  />
-);
-
-function minuteToHours(num){
-  var hours = (num / 60);
-  var rhours = Math.floor(hours);
-  var minutes = (hours - rhours) * 60;
-  var rminutes = Math.round(minutes);
-  return ( rhours === 0 ? "" : rhours + " Jam") + (rminutes === 0 ? "" : " " + rminutes + " Menit")
-}
 
 class Home extends Component {
   constructor(props){
@@ -48,30 +30,6 @@ class Home extends Component {
       this.setState({movies})
     })
   }
-
-  // submitForm(event) {
-  //   event.preventDefault();
-  //       axios
-  //         .get(`https://backendexample.sanbersy.com/api/data-movie`)
-  //         .then((res) => {
-  //           let data = res.data;
-  //           this.setState(
-  //             data.filter((movie) =>
-  //               movie.title.toLowerCase().includes(search.toLowerCase())
-  //             )
-  //           );
-  //         });
-  // };
-
-//   handleChange(e) {
-//     axios
-//           .get(`https://backendexample.sanbersy.com/api/data-movie`)
-//           .then((res) => {
-//             let data = res.data;
-//             let movies = data.filter((movie) => movie.title.toLowerCase().includes(toLowerCase()))
-//             this.setState({movies})
-//           });
-// }
 
   render(){
     return (

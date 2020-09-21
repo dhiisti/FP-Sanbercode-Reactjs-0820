@@ -3,8 +3,7 @@ import { MovieContext } from "../../context/MovieContext"
 import { UserContext } from "../../context/UserContext";
 import {useHistory} from "react-router-dom";
 import axios from "axios";
-import { Table, Button, Tooltip } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
+import { Table,} from 'antd';
 import './movie.css'
 
 const MovieTable = () => {
@@ -102,15 +101,57 @@ const MovieTable = () => {
       {
         title: 'Title',
         dataIndex: 'title',
-        sorter: (a, b) => a.title.localeCompare(b.title)
+        sorter: (a, b) => a.title.localeCompare(b.title),
       },
       {
         title: 'Description',
         dataIndex: 'description',
+        ellipsis: true,
       },
       {
         title: 'Genre',
         dataIndex: 'genre',
+        filters: [
+          {
+            text: 'Action',
+            value: 'Action',
+          },
+          {
+            text: 'Anime',
+            value: 'Anime',
+          },
+          {
+            text: 'Comedy',
+            value: 'Comedy',
+          },
+          {
+            text: 'Horror',
+            value: 'Horror',
+          },
+          {
+            text: 'Drama',
+            value: 'Drama',
+          },
+          {
+            text: 'Romance',
+            value: 'Romance',
+          },
+          {
+            text: 'Fantasy',
+            value: 'Fantasy',
+          },
+          {
+            text: 'Adventure',
+            value: 'Adventure',
+          },
+          {
+            text: 'Family',
+            value: 'Family',
+          },
+        ],
+        // specify the condition of filtering result
+        // here is that finding the name started with `value`
+        onFilter: (value, record) => record.genre.indexOf(value) === 0,
         sorter: (a, b) => a.title.localeCompare(b.title)
       },
       {
@@ -148,10 +189,11 @@ const MovieTable = () => {
         )
       },
     ];
-    
+
     function onChange(filters, sorter, extra) {
       console.log('params', filters, sorter, extra);
     }
+    
 
   return (
     <>

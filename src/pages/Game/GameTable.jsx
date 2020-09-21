@@ -3,9 +3,7 @@ import { GameContext } from "../../context/GameContext"
 import { UserContext } from "../../context/UserContext";
 import {useHistory} from "react-router-dom"
 import axios from "axios";
-import {Table, Button, Space} from 'antd';
-// import Highlighter from 'react-highlight-words';
-import { SearchOutlined } from '@ant-design/icons';
+import {Table,} from 'antd';
 import '../Movie/movie.css'
 
 const GameTable = () => {
@@ -233,16 +231,24 @@ const GameTable = () => {
       dataIndex: 'platform',
       filters: [
         {
-          text: 'PC',
-          value: 'PC',
+          text: 'Microsoft Windows',
+          value: 'Microsoft Windows',
         },
         {
-          text: 'PS',
-          value: 'PS',
+          text: 'PlayStation',
+          value: 'PlayStation',
         },
         {
           text: 'Xbox',
           value: 'Xbox',
+        },
+        {
+          text: 'Nintendo',
+          value: 'Nintendo',
+        },
+        {
+          text: 'PC',
+          value: 'PC',
         },
       ],
       // specify the condition of filtering result

@@ -4,17 +4,6 @@ import { Image } from "antd";
 import { useParams } from "react-router-dom";
 import './Home.css'
 
-function minuteToHours(num) {
-  var hours = num / 60;
-  var rhours = Math.floor(hours);
-  var minutes = (hours - rhours) * 60;
-  var rminutes = Math.round(minutes);
-  return (
-    (rhours === 0 ? "" : rhours + " Hour(s)") +
-    (rminutes === 0 ? "" : " " + rminutes + " Minutes")
-  );
-}
-
 const GameDetail = () => {
   const [dataGame, setData] = useState(null);
   const { id } = useParams();

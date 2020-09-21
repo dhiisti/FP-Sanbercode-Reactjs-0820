@@ -54,7 +54,7 @@ const GameSider = () =>{
                   </Menu>
                 </Sider>
                 <Content style={{ padding: '0 24px', minHeight: 280 }}>
-                  <p>Silahkan edit daftar filmnya</p>
+                  <p>Silahkan edit daftar gamenya</p>
                   <div className="site-layout-background" style={{ padding: 24, textAlign: 'center' }}>
                     <Switch>
                       {routes.map((route, index) => (
